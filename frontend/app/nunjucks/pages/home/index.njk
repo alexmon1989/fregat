@@ -1,0 +1,16 @@
+{% set title = "Главная страница" %}
+{% set active_menu = "home" %}
+
+{% extends "app/nunjucks/layout/base.njk" %}
+
+{% block content %}
+
+    <!-- REVOLUTION SLIDER -->
+        {% include "app/nunjucks/pages/home/_partials/slider.njk" %}
+    <!-- /REVOLUTION SLIDER -->
+
+    <!-- INFOBAR -->
+        {% include "app/nunjucks/pages/home/_partials/infobar.njk" %}
+    <!-- /INFOBAR -->
+
+{% endblock %}

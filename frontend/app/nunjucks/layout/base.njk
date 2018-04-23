@@ -1,0 +1,65 @@
+{% if not(title) %}
+    {% set title = "Default title" %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <meta name="description" content="" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CSS -->
+    <link href="css/bundle.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="smoothscroll enable-animation">
+
+<!-- SLIDE TOP -->
+{% include "app/nunjucks/layout/_partials/slide_top.njk" %}
+<!-- /SLIDE TOP -->
+
+<!-- wrapper -->
+<div id="wrapper">
+
+    <!-- HEADER -->
+    {% include "app/nunjucks/layout/_partials/header.njk" %}
+    <!-- /HEADER -->
+
+    <!-- CONTENT -->
+    <div class="min-height-50vh">
+        {% block content %}{% endblock %}
+    </div>
+    <!-- / CONTENT -->
+
+    <!-- FOOTER -->
+    {% include "app/nunjucks/layout/_partials/footer.njk" %}
+    <!-- /FOOTER -->
+
+</div>
+<!-- /wrapper -->
+
+
+<!-- SCROLL TO TOP -->
+<a href="#" id="toTop"></a>
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div class="inner">
+        <span class="loader"></span>
+    </div>
+</div><!-- /PRELOADER -->
+
+<!-- JAVASCRIPT FILES -->
+<script>var plugin_path = 'plugins/';</script>
+<script src="js/bundle.min.js"></script>
+
+</body>
+</html>

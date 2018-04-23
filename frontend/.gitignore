@@ -1,0 +1,7 @@
+/.idea/
+/node_modules/
+dist/
+/app/*.html
+app/css/custom.css
+app/css/bundle.min.css
+app/js/bundle.min.js
